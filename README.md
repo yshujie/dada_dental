@@ -5,6 +5,7 @@
 ## 功能特性
 
 ## 软件架构
+```
 dada_dental/
 │
 ├── data/                   # 数据文件
@@ -30,6 +31,7 @@ dada_dental/
 ├── Dockerfile              # Docker 配置
 ├── requirements.txt        # Python 包依赖
 └── README.md               # 项目说明文件
+```
 
 ## 快速开始
 
