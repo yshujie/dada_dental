@@ -37,6 +37,11 @@ dada_dental/
 
 ### 构建
 
+#### 构建 Docker 镜像
+```
+docker build --build-arg PROJECT_NAME=dada_dental --build-arg GITHUB_REPO_URL=https://github.com/yshujie/dada_dental.git -t dada_dental_image .
+```
+
 ### 运行
 
 ## 使用指南
