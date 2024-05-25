@@ -46,4 +46,9 @@ docker build --build-arg PROJECT_NAME=dada_dental --build-arg GITHUB_REPO_URL=ht
 
 ### 运行
 
+#### 运行 Docker 容器
+```
+docker run -p 8000:8000 dada_dental
+```
+
 ## 使用指南
