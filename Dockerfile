@@ -20,6 +20,10 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &
 ENV PATH=/opt/conda/bin:$PATH
 RUN /opt/conda/bin/conda init bash
 
+# 定义构建参数
+ARG PROJECT_NAME
+ARG GITHUB_REPO_URL
+
 # 克隆 GitHub 仓库
 RUN git clone $GITHUB_REPO_URL /opt/$PROJECT_NAME
 
