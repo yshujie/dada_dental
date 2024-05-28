@@ -4,8 +4,8 @@ FROM python:3.8-slim
 # 设置工作目录
 WORKDIR /opt/dada_dental
 
-# 安装必要的系统工具
-RUN apt-get update && apt-get install -y wget git inotify-tools
+# 安装必要的系统工具，包括 procps 包以获得 pkill
+RUN apt-get update && apt-get install -y wget git inotify-tools procps
 
 # 复制 requirements.txt 并安装 Python 包依赖
 COPY requirements.txt .
