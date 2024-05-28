@@ -14,5 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制项目代码
 COPY . .
 
-# 启动容器时默认进入 bash
-CMD ["bash"]
+# 设置启动命令
+CMD ["bash", "-c", "chmod +x /opt/dada_dental/watch.sh && /opt/dada_dental/watch.sh"]
