@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from datatime import datetime
+from datetime import datetime
 
 app = FastAPI()
 
