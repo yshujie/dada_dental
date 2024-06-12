@@ -18,10 +18,4 @@ services:
     environment:
       - HTTP_PROXY=http://127.0.0.1:20171
       - HTTPS_PROXY=http://127.0.0.1:20171
-    networks:
-      - default
-
-networks:
-  default:
-    external:
-      name: bridge
+    network_mode: "host"
