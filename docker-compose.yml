@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  dada_dental:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dada_dental_image
+    container_name: dada_dental_container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ~/code/python/github.com/yshujie/dada_dental:/opt/dada_dental
+    working_dir: /opt/dada_dental
+    environment:
+      - HTTP_PROXY=http://0.0.0.0:20171
+      - HTTPS_PROXY=http://0.0.0.0:20171
+      - NO_PROXY=localhost,127.0.0.1
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: bridge

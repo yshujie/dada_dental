@@ -49,14 +49,14 @@ git clone git@github.com:yshujie/dada_dental.git
 
 #### 构建 Docker 镜像
 ```
-docker build -t dada_dental_image .
+docker-compose build
 ```
 
 ### 运行
 
 #### 运行 Docker 容器
 ```
-docker run -d -p 8000:8000 -v ~/code/python/github.com/yshujie/dada_dental:/opt/dada_dental -w /opt/dada_dental --name dada_dental_container dada_dental_image
+docker-compose up -d
 ```
 
 ## 使用指南

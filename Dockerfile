@@ -1,6 +1,11 @@
 # 使用官方的 Python 基础镜像
 FROM python:3.8-slim
 
+# 设置代理
+ENV http_proxy="http://0.0.0.0:20171"
+ENV https_proxy="http://0.0.0.0:20171"
+ENV no_proxy="localhost,127.0.0.1"
+
 # 设置工作目录
 WORKDIR /opt/dada_dental
 
