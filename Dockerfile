@@ -2,16 +2,18 @@
 FROM python:3.8-slim
 
 # 设置代理
-ARG HTTP_PROXY
-ARG HTTPS_PROXY
-ENV http_proxy=${HTTP_PROXY}
-ENV https_proxy=${HTTPS_PROXY}
+ARG http_proxy
+ARG https_proxy
+ENV http_proxy=${http_proxy}
+ENV https_proxy=${https_proxy}
+
+RUN echo $http_proxy && echo $https_proxy
 
 # 设置工作目录
 WORKDIR /opt/dada_dental
 
 # 安装必要的系统工具，包括 procps 包以获得 pkill
-RUN apt-get update && apt-get install -y wget git inotify-tools procps
+RUN apt-get update && apt-get install -y wget git inotify-tools procps --proxy=${http_proxy}
 
 # 复制 requirements.txt 并安装 Python 包依赖
 COPY requirements.txt .
