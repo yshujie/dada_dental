@@ -13,9 +13,8 @@ services:
       - ~/code/python/github.com/yshujie/dada_dental:/opt/dada_dental
     working_dir: /opt/dada_dental
     environment:
-      - HTTP_PROXY=http://0.0.0.0:20171
-      - HTTPS_PROXY=http://0.0.0.0:20171
-      - NO_PROXY=localhost,127.0.0.1
+      - HTTP_PROXY=http://127.0.0.1:20171
+      - HTTPS_PROXY=http://127.0.0.1:20171
     networks:
       - default
 

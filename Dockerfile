@@ -2,8 +2,10 @@
 FROM python:3.8-slim
 
 # 设置代理
-ENV http_proxy="http://127.0.0.1:20171"
-ENV https_proxy="http://127.0.0.1:20171"
+ARG http_proxy
+ARG https_proxy
+ENV http_proxy=${http_proxy}
+ENV https_proxy=${https_proxy}
 
 # 设置工作目录
 WORKDIR /opt/dada_dental
