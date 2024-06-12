@@ -2,10 +2,10 @@
 FROM python:3.8-slim
 
 # 设置代理
-ARG http_proxy
-ARG https_proxy
-ENV http_proxy=${http_proxy}
-ENV https_proxy=${https_proxy}
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
+ENV http_proxy=${HTTP_PROXY}
+ENV https_proxy=${HTTPS_PROXY}
 
 # 设置工作目录
 WORKDIR /opt/dada_dental

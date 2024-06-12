@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - HTTP_PROXY=http://127.0.0.1:20171
+        - HTTPS_PROXY=http://127.0.0.1:20171
     image: dada_dental_image
     container_name: dada_dental_container
     ports:
