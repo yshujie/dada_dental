@@ -4,11 +4,11 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - http_proxy=http://127.0.0.1:20171
-        - https_proxy=http://127.0.0.1:20171
+        - http_proxy=http://172.17.0.1:20171
+        - https_proxy=http://172.17.0.1:20171
     environment:
-      - http_proxy=http://127.0.0.1:20171
-      - https_proxy=http://127.0.0.1:20171
+      - http_proxy=http://172.17.0.1:20171
+      - https_proxy=http://172.17.0.1:20171
     image: dada_dental_image
     container_name: dada_dental_container
     ports:
@@ -16,4 +16,4 @@ services:
     volumes:
       - ~/code/python/github.com/yshujie/dada_dental:/opt/dada_dental
     working_dir: /opt/dada_dental
-    network_mode: "host"
+    network_mode: "bridge"
